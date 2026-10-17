@@ -263,3 +263,44 @@ h2 {
     scroll-behavior: auto !important;
   }
 }
+
+/* MODHEATHEN — ITERATION 02 */
+:root { --acid: #e9d777; --violet: #bbb1d0; }
+.site-header { position: sticky; top: 0; z-index: 50; box-shadow: 0 3px 0 rgba(23,25,22,.1); }
+.brand-mark { transition: transform .3s ease; }
+.brand:hover .brand-mark { transform: rotate(-9deg); }
+.hero-art { isolation: isolate; }
+.hero-art::before { content: 'CURIOUS GOODS  /  NO. 001'; position: absolute; left: 22px; top: 24px; font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+.hero-art::after { content: '✳'; position: absolute; font-size: 95px; right: -12px; top: 35px; color: var(--acid); transform: rotate(20deg); z-index: -1; }
+.art-disc { transition: transform .8s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease; }
+.art-disc:hover { transform: rotate(8deg) scale(1.04); box-shadow: 0 0 0 3px var(--ink), 34px 34px 0 #a9472a; }
+.art-disc.flipped { transform: rotate(17deg); }
+.exhibit-control { position: absolute; left: 28px; bottom: 28px; max-width: 55%; display: flex; align-items: center; gap: 12px; }
+.exhibit-control button { width: 44px; height: 44px; border: 2px solid var(--ink); border-radius: 50%; background: var(--acid); color: var(--ink); font-size: 23px; cursor: pointer; transition: transform .2s; }
+.exhibit-control button:hover { transform: rotate(45deg); }
+.exhibit-control span { font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.collection-card { position: relative; overflow: hidden; border: 2px solid var(--ink); box-shadow: 7px 7px 0 var(--ink); }
+.collection-card:hover { transform: translate(-3px,-6px) rotate(-1deg); box-shadow: 11px 13px 0 var(--ink); }
+.collection-symbol { transition: transform .45s ease; }
+.collection-card:hover .collection-symbol { transform: rotate(-20deg) scale(1.13); }
+.collection-card::after { content: 'MODHEATHEN / ARCHIVE'; position: absolute; top: 45%; right: -64px; transform: rotate(90deg); font-size: 9px; font-weight: 800; letter-spacing: .12em; }
+.featured { padding: 95px 5%; background: var(--cream); border-top: 2px solid var(--ink); }
+.featured-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 35px; }
+.featured-head h2 { font-size: clamp(46px,6vw,82px); }
+.featured-note { max-width: 260px; line-height: 1.5; font-size: 14px; }
+.goods-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+.good-card { border: 2px solid var(--ink); background: var(--paper); }
+.good-art { aspect-ratio: 4/5; display: grid; place-items: center; overflow: hidden; position: relative; }
+.good-art span { font: 800 clamp(35px,5vw,80px)/.95 'Space Grotesk',sans-serif; text-align: center; letter-spacing: -.06em; transition: transform .35s; }
+.good-card:hover .good-art span { transform: scale(1.1) rotate(-5deg); }
+.good-art.one { background: var(--acid); }
+.good-art.two { background: var(--violet); }
+.good-art.three { background: #b9d0b2; }
+.good-meta { padding: 18px; display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+.good-meta strong { display: block; font-size: 16px; }
+.good-meta small { display: block; margin-top: 5px; font-size: 11px; }
+.preview-tag { border: 1px solid var(--ink); padding: 5px 7px; font-size: 9px; font-weight: 800; white-space: nowrap; }
+.archive-note { margin-top: 25px; font-size: 12px; }
+.back-top { cursor: pointer; border: 1px solid #aaa; background: transparent; color: white; padding: 10px 14px; font-weight: 800; }
+@media (max-width: 900px) { .site-header { position: relative; } .goods-grid { grid-template-columns: 1fr; } .featured-head { display: block; } .exhibit-control { bottom: 15px; left: 15px; } .hero-art::after { font-size: 65px; } }
+@media (prefers-reduced-motion: reduce) { .art-disc, .collection-symbol, .good-art span { transition: none; } }
