@@ -485,17 +485,14 @@ h2 {
   }
 }
 
-/* Align monogram with top of wordmark */
+
+/* MODHEATHEN — CENTER WORDMARK, RAISE MONOGRAM */
 
 .site-header .brand {
-  align-items: flex-start !important;
+  align-items: center !important;
 }
-
-.site-header .brand-name {
-  margin-top: 0 !important;
-}
-
 
 .site-header .brand-logo {
-  transform: translateY(-4px);
+  transform: translateY(-12px);
 }
+
