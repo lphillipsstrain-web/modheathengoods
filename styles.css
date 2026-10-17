@@ -484,3 +484,14 @@ h2 {
     font-size: 10px;
   }
 }
+
+/* Align monogram with top of wordmark */
+
+.site-header .brand {
+  align-items: flex-start !important;
+}
+
+.site-header .brand-name {
+  margin-top: 0 !important;
+}
+
