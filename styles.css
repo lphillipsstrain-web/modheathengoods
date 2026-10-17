@@ -304,3 +304,29 @@ h2 {
 .back-top { cursor: pointer; border: 1px solid #aaa; background: transparent; color: white; padding: 10px 14px; font-weight: 800; }
 @media (max-width: 900px) { .site-header { position: relative; } .goods-grid { grid-template-columns: 1fr; } .featured-head { display: block; } .exhibit-control { bottom: 15px; left: 15px; } .hero-art::after { font-size: 65px; } }
 @media (prefers-reduced-motion: reduce) { .art-disc, .collection-symbol, .good-art span { transition: none; } }
+
+
+
+
+/* ORIGINAL MODHEATHEN MONOGRAM */
+
+.brand-logo {
+  display: block;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+  }
+}
